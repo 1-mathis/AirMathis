@@ -15,7 +15,6 @@ function classLoader($className)
   $folderPathClasses = __DIR__ . '/Classes/';
   $folderPathModels = __DIR__ . '/Models/';
   $folderPathRepositories = __DIR__ . '/Repositories/';
-  $folderPathControllers = __DIR__ . '/Controllers/';
 
   // Vérifie si le fichier de classe existe dans le dossier "Classes" et l'inclut si c'est le cas.
   if (file_exists($folderPathClasses . $filePathClass)) {
@@ -30,11 +29,6 @@ function classLoader($className)
   // Vérifie si le fichier de classe existe dans le dossier "Repositories" et l'inclut si c'est le cas.
   if (file_exists($folderPathRepositories . $filePathClass)) {
     require $folderPathRepositories . $filePathClass;
-  }
-
-  // Vérifie si le fichier de classe existe dans le dossier "Controllers" et l'inclut si c'est le cas.
-  if (file_exists($folderPathControllers . $filePathClass)) {
-    require $folderPathControllers . $filePathClass;
   }
 }
 
@@ -52,4 +46,6 @@ $database = new Database();
 $database->getDb();
 
 // Importe le fichier `router.php` ayant la responsabilité du routing de l'application.
+require __DIR__ . '/./Services/Response.php';
+
 require_once __DIR__ . "/router.php";

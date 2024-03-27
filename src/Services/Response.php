@@ -1,12 +1,12 @@
 <?php
-
 trait Response
 {
-  public function render($view, $data = null)
+  public function render(string $view, ?array $viewData = null): void
   {
-    if (is_array($data) && !empty($data)) {
-      extract($data);
+    if (!empty($viewData)) {
+      extract($viewData);
     }
-    include_once __DIR__ . '/../Views/' . $view . ".php";
+    $viewFile = __DIR__ . "/../View/$view.php";
+    require_once $viewFile;
   }
 }
