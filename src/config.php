@@ -13,3 +13,4 @@ define("URL_USER", "/public/user"); // page des infos de l'utilisateur (page 7 d
 define("URL_FORM", "/public/form"); //page du formulaire d'inscription (page 2 de la maquette)
 define("URL_CONNEXION", "/public/connexion"); // page du formulaire de connexion (page 1 de la maquette)
 define("URL_MODIFICATIONVOLS", "/public/modificationVols"); // page de modification de vols (page 1 de la maquette)// page de modification des infos de l'utilisateur (page 8 de la maquette)
+define("URL_PANIER", "/public/panier"); // page de modification de vols (page 1 de la maquette)// page de modification des infos de l'utilisateur (page 8 de la maquette)

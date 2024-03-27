@@ -1,11 +1,12 @@
 <?php
 
-class ConnexionController
+
+class PanierController
 {
   use Response;
   public function index()
   {
-    $this->render('connexion');
+    $this->render('panier');
   }
 }
 

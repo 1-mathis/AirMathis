@@ -7,6 +7,8 @@ require __DIR__ . "/Controllers/UserController.php";
 require __DIR__ . "/Controllers/FormController.php";
 require __DIR__ . "/Controllers/ConnexionController.php";
 require __DIR__ . "/Controllers/ModificationVolsController.php";
+require __DIR__ . "/Controllers/PanierController.php";
+require __DIR__ . "/Controllers/PanierController.php";
 
 
 // Crée des instances des contrôleurs.
@@ -16,6 +18,7 @@ $userController = new UserController();
 $formController = new FormController();
 $connexionController = new ConnexionController();
 $modificationVolsController = new ModificationVolsController();
+$panierController = new PanierController();
 
 // Récupère l'URI de la requête actuelle pour déterminer la route demandée par l'utilisateur.
 $route = $_SERVER['REQUEST_URI'];
@@ -36,6 +39,9 @@ switch ($route) {
     break;
   case URL_MODIFICATIONVOLS: //page de modification du vol
     $modificationVolsController->index();
+    break;
+  case URL_PANIER: //page de modification du vol
+    $panierController->index();
     break;
   default: // Si aucune route correspondante n'est trouvée.
     $homeController->pageNotFound();
