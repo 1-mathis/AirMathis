@@ -1,13 +1,13 @@
 <?php
 
 
-class ErrorPageController
+class VolsController
 {
   use Response;
   public function index()
   {
-    $this->render('404');
+    $this->render('vols');
   }
 }
 
-//ok
+// ok

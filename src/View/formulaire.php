@@ -1,5 +1,5 @@
 <?php
-
+include("../src/includes/header_form.php");
 ?>
 
 <!DOCTYPE html>
@@ -11,33 +11,63 @@
   <meta name="description" content="" />
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" type="text/css" href="style.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
   <script type="module" src="" defer></script>
-  <title>Formulaire</title>
+  <title>Page de Formulaire</title>
 </head>
 
 <body>
-  <header></header>
   <main>
 
     <form>
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <label for="exampleInputEmail1" class="form-label">adresse mail</label>
         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        <div id="emailHelp" class="form-text text-primary">Cette information restera privée. Seul vous la connaîtrez.</div>
       </div>
       <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <label for="exampleInputPassword1" class="form-label">mot de passe</label>
         <input type="password" class="form-control" id="exampleInputPassword1">
+        <div id="password" class="form-text text-primary">Cette information restera privée. Seul vous la connaîtrez.</div>
+
       </div>
-      <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      <div class="mb-3">
+        <label for="exampleInputName1" class="form-label">prénom</label>
+        <input type="text" class="form-control" id="exampleInputPassword1">
+        <div id="name" class="form-text text-primary">Cette information restera privée. Seul vous la connaîtrez.</div>
+
       </div>
-      <button type="submit" class="btn btn-primary">Envoyer</button>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">nom</label>
+        <input type="text" class="form-control" id="exampleInputPassword1">
+        <div id="surname" class="form-text text-primary">Cette information restera privée. Seul vous la connaîtrez.</div>
+      </div>
+
+      </div>
+      <button type="submit" class="btn btn-primary" id="btnSend">Envoyer</button>
     </form>
 
   </main>
-  <footer></footer>
 </body>
+
+<style>
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+
+    margin: 70px 500px;
+  }
+</style>
+<footer>
+  <?php
+  include("../src/includes/footer.php");
+  ?>
+</footer>
 
 </html>

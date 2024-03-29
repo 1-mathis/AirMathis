@@ -6,8 +6,8 @@ class UserController
   use Response;
   public function index()
   {
-    $this->render('User');
+    $this->render('user');
   }
 }
 
-//ok
+// ok

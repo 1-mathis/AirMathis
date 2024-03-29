@@ -46,11 +46,3 @@ a:hover {
   transition-duration: 1s;
   font-size: 22px;
 }
-
-/* page des vols */
-.all-cards {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
