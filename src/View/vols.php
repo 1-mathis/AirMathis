@@ -29,7 +29,7 @@ include("../src/includes/header_site.php");
         <div class="card-body">
           <h5 class="card-title">Card title</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">réserver mon vol</a>
+          <a href="modifVols" class="btn btn-primary" id="reserve">réserver mon vol</a>
         </div>
       </div>
 

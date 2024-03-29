@@ -1,13 +1,12 @@
 <?php
 
-
 class UserController
 {
   use Response;
-  public function index()
+
+  //mettre les actions du crud ici ↓
+  public function connexion()
   {
     $this->render('user');
   }
 }
-
-// ok

@@ -31,13 +31,13 @@ switch ($route) {
     $homeController->index();
     break;
   case URL_USER: // Si l'URI correspond à la page des étudiants. | page de l'utilisateur
-    $userController->index();
+    $userController->connexion();
     break;
   case URL_FORM: // page du fomulaire d'inscription | 
     $formController->index();
     break;
   case URL_CONNEXION: //page du formulaire de connexion
-    $connexionController->index();
+    $userController->connexion();
     break;
   case URL_VOLS: //page du formulaire de connexion
     $volsController->index();
